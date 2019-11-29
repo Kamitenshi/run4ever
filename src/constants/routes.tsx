@@ -6,7 +6,7 @@ export const routes = {
   home: { path: '/home'},
   login: { title: 'Login', path: '/login', icon: logIn },
   logout: { title: 'Logout', path: '/logout', icon: logOut },
-  map: { title: 'Map', path: '/tabs/map', icon: map },
+  // map: { title: 'Map', path: '/tabs/map', icon: map },
   schedule: { title: 'Schedule', path: '/tabs/schedule', icon: calendar },
   signup: { title: 'Signup', path: '/signup', icon: personAdd },
   speakers: { title: 'Speakers', path: '/tabs/speakers', icon: contacts },
@@ -19,17 +19,17 @@ export const pages = {
   appPages: [
     routes.schedule,
     routes.speakers,
-    routes.map,
+    // routes.map,
     routes.about
   ],
   loggedInPages: [
     routes.account,
-    routes.support,
+    // routes.support,
     routes.logout
   ],
   loggedOutPages: [
     routes.login,
-    routes.support,
+    // routes.support,
     routes.signup
   ]
 };

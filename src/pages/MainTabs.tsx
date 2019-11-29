@@ -22,7 +22,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         <Route path="/tabs/speakers/:id" component={SpeakerDetail} exact={true} />
         <Route path="/tabs/schedule/:id" component={SessionDetail} />
         <Route path="/tabs/speakers/sessions/:id" component={SessionDetail} />
-        <Route path="/tabs/map" component={Map} exact={true} />
+        {/* <Route path="/tabs/map" component={Map} exact={true} /> */}
         <Route path="/tabs/about" component={About} exact={true} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
@@ -34,10 +34,10 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           <IonIcon icon={contacts} />
           <IonLabel>Speakers</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="map" href="/tabs/map">
+        {/* <IonTabButton tab="map" href="/tabs/map">
           <IonIcon icon={map} />
           <IonLabel>Map</IonLabel>
-        </IonTabButton>
+        </IonTabButton> */}
         <IonTabButton tab="about" href="/tabs/about">
           <IonIcon icon={informationCircle} />
           <IonLabel>About</IonLabel>

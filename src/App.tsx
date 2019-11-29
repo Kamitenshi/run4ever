@@ -72,7 +72,7 @@ const IonicApp: React.FC<IonicAppProps> = ({ darkMode, sessions, setIsLoggedIn, 
     sessions.length === 0 ? (
       <div/>
     ) : (
-        <IonApp className={`${darkMode ? 'dark-theme' : ''}`}>
+        // <IonApp className={`${darkMode ? 'dark-theme' : ''}`}>
           <IonReactRouter>
             <IonReactRouter>
               <IonSplitPane contentId="main">
@@ -82,8 +82,8 @@ const IonicApp: React.FC<IonicAppProps> = ({ darkMode, sessions, setIsLoggedIn, 
                   <Route path={routes.account.path} component={Account} />
                   <Route path={routes.login.path} component={Login} />
                   <Route path={routes.signup.path} component={Signup} />
-                  <Route path={routes.support.path} component={Support} />
-                  <Route path={routes.tutorial.path} component={Tutorial} />
+                  {/* <Route path={routes.support.path} component={Support} /> */}
+                  {/* <Route path={routes.tutorial.path} component={Tutorial} /> */}
                   <Route path={routes.logout.path} render={() => {
                     setIsLoggedIn(false);
                     setUsername(undefined);
@@ -95,7 +95,7 @@ const IonicApp: React.FC<IonicAppProps> = ({ darkMode, sessions, setIsLoggedIn, 
               </IonSplitPane>
             </IonReactRouter>
           </IonReactRouter>
-        </IonApp>
+        // </IonApp>
       )
   )
 }

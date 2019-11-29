@@ -56,22 +56,22 @@ const Menu: React.FC<MenuProps> = ({ darkMode, history, isAuthenticated, setDark
           <IonListHeader>Account</IonListHeader>
           {isAuthenticated ? renderlistItems(pages.loggedInPages) : renderlistItems(pages.loggedOutPages)}
         </IonList>
-        <IonList>
+        {/* <IonList>
           <IonListHeader>Tutorial</IonListHeader>
           <IonItem onClick={() => {
             setDisableMenu(true);
             history.push('/tutorial');
           }}>
-            <IonIcon slot="start" icon={hammer} />
+          <IonIcon slot="start" icon={hammer} />
             Show Tutorial
           </IonItem>
-        </IonList>
-        <IonList>
+        </IonList>  */}
+        {/* <IonList>
           <IonItem>
             <IonLabel>Dark Theme</IonLabel>
             <IonToggle checked={darkMode} onClick={() => setDarkMode(!darkMode)} />
           </IonItem>
-        </IonList>
+        </IonList> */}
       </IonContent>
     </IonMenu>
   );
