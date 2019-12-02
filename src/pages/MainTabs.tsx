@@ -16,23 +16,23 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   return (
     <IonTabs>
       <IonRouterOutlet>
-        <Redirect exact path="/tabs" to="/tabs/schedule" />
-        <Route path="/tabs/schedule" component={SchedulePage} exact={true} />
-        <Route path="/tabs/speakers" component={SpeakerList} exact={true} />
-        <Route path="/tabs/speakers/:id" component={SpeakerDetail} exact={true} />
-        <Route path="/tabs/schedule/:id" component={SessionDetail} />
-        <Route path="/tabs/speakers/sessions/:id" component={SessionDetail} />
+        <Redirect exact path="/tabs" to="/tabs/home" />
+        <Route path="/tabs/home" component={SchedulePage} exact={true} />
+        <Route path="/tabs/races" component={SpeakerList} exact={true} />
+        <Route path="/tabs/races/:id" component={SpeakerDetail} exact={true} />
+        {/* <Route path="/tabs/schedule/:id" component={SessionDetail} /> */}
+        {/* <Route path="/tabs/speakers/sessions/:id" component={SessionDetail} /> */}
         {/* <Route path="/tabs/map" component={Map} exact={true} /> */}
         <Route path="/tabs/about" component={About} exact={true} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
-        <IonTabButton tab="schedule" href="/tabs/schedule">
+        <IonTabButton tab="schedule" href="/tabs/home">
           <IonIcon icon={calendar} />
-          <IonLabel>Schedule</IonLabel>
+          <IonLabel>Accueil</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="speakers" href="/tabs/speakers">
+        <IonTabButton tab="speakers" href="/tabs/races">
           <IonIcon icon={contacts} />
-          <IonLabel>Speakers</IonLabel>
+          <IonLabel>Mes courses</IonLabel>
         </IonTabButton>
         {/* <IonTabButton tab="map" href="/tabs/map">
           <IonIcon icon={map} />
@@ -40,7 +40,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         </IonTabButton> */}
         <IonTabButton tab="about" href="/tabs/about">
           <IonIcon icon={informationCircle} />
-          <IonLabel>About</IonLabel>
+          <IonLabel>À propos</IonLabel>
         </IonTabButton>
       </IonTabBar>
     </IonTabs>

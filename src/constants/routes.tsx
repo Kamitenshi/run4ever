@@ -1,24 +1,24 @@
 import { calendar, contacts, help, informationCircle, logIn, logOut, map, person, personAdd } from 'ionicons/icons';
 
 export const routes = {
-  about: { title: 'About', path: '/tabs/about', icon: informationCircle },
+  about: { title: 'À propos', path: '/tabs/about', icon: informationCircle },
   account: { title: 'Account', path: '/account', icon: person },
-  home: { path: '/home'},
-  login: { title: 'Login', path: '/login', icon: logIn },
-  logout: { title: 'Logout', path: '/logout', icon: logOut },
+  // home: { path: '/home'},
+  login: { title: 'Se connecter', path: '/login', icon: logIn },
+  logout: { title: 'Se déconnecter', path: '/logout', icon: logOut },
   // map: { title: 'Map', path: '/tabs/map', icon: map },
-  schedule: { title: 'Schedule', path: '/tabs/schedule', icon: calendar },
-  signup: { title: 'Signup', path: '/signup', icon: personAdd },
-  speakers: { title: 'Speakers', path: '/tabs/speakers', icon: contacts },
-  support: { title: 'Support', path: '/support', icon: help },
+  home: { title: 'Accueil', path: '/tabs/home', icon: calendar },
+  signup: { title: 'S\'inscrire', path: '/signup', icon: personAdd },
+  races: { title: 'Mes courses', path: '/tabs/races', icon: contacts },
+  // support: { title: 'Support', path: '/support', icon: help },
   tabs: { path: '/tabs' },
-  tutorial: { path: '/tutorial' },
+  // tutorial: { path: '/tutorial' },
 };
 
 export const pages = {
   appPages: [
-    routes.schedule,
-    routes.speakers,
+    routes.home,
+    routes.races,
     // routes.map,
     routes.about
   ],

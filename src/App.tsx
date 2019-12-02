@@ -24,6 +24,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import MainTabs from './pages/MainTabs';
+// import SchedulePage from './pages/SchedulePage';
 import { connect } from './data/connect';
 import { AppContextProvider } from './data/AppContext';
 import { loadConfData } from './data/sessions/sessions.actions';
@@ -34,7 +35,7 @@ import Signup from './pages/Signup';
 import Support from './pages/Support';
 import Tutorial from './pages/Tutorial';
 import Home from './pages/Home'
-import HomeOrTutorial from './components/HomeOrTutorial';
+// import HomeOrTutorial from './components/HomeOrTutorial';
 import { Session } from "./models/Session";
 import { routes } from './constants/routes'
 
@@ -89,8 +90,11 @@ const IonicApp: React.FC<IonicAppProps> = ({ darkMode, sessions, setIsLoggedIn, 
                     setUsername(undefined);
                     return <Redirect to="/tabs" />
                   }} />
-                  <Route path="/" component={HomeOrTutorial} exact={true} />
-                  <Route path="/home" component={Home} exact={true} />
+                  {/* <Route path="/" component={HomeOrTutorial} exact={true} /> */}
+                  {/* <Route path="/home" component={Home} exact={true} /> */}
+                  <Route path="/" render={() => {
+                    return <Redirect to="/tabs" />
+                  }} />
                 </IonRouterOutlet>
               </IonSplitPane>
             </IonReactRouter>

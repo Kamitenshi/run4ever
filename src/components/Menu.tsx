@@ -49,11 +49,11 @@ const Menu: React.FC<MenuProps> = ({ darkMode, history, isAuthenticated, setDark
       </IonHeader>
       <IonContent class="outer-content">
         <IonList>
-          <IonListHeader>Navigate</IonListHeader>
+          <IonListHeader>Naviguer</IonListHeader>
           {renderlistItems(pages.appPages)}
         </IonList>
         <IonList>
-          <IonListHeader>Account</IonListHeader>
+          <IonListHeader>Compte</IonListHeader>
           {isAuthenticated ? renderlistItems(pages.loggedInPages) : renderlistItems(pages.loggedOutPages)}
         </IonList>
         {/* <IonList>
